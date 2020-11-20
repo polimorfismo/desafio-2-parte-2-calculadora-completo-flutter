@@ -111,7 +111,7 @@ class _MeuAppState extends State<MeuApp> {
                                 });
                               },
                               child: Text(
-                                '/',
+                                '÷',
                                 style: TextStyle(
                                   fontSize: 28,
                                 ),
