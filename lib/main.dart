@@ -5,12 +5,14 @@ void main() {
 }
 
 class MeuApp extends StatefulWidget {
+  const MeuApp({super.key});
 
   @override
-  _MeuAppState createState() => _MeuAppState();
+  State<MeuApp> createState() => _MeuAppState();
 }
 
 class _MeuAppState extends State<MeuApp> {
+
   String mensagemVisor = '';
 
   @override
@@ -47,155 +49,84 @@ class _MeuAppState extends State<MeuApp> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                               mensagemVisor = 'limpar tela';
-                               setState(() {
-                                 mensagemVisor;
-                               });
-                              },
-                              child: Text(
-                                'C',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'limpar tela';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  'C',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                                mensagemVisor = 'deletar';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                'DEL',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'deletar';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  'DEL',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                                mensagemVisor = 'porcentagem';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '%',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'porcentagem';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '%',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                                mensagemVisor = 'dividir';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '÷',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'dividir';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '÷',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 7';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '7',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 8';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '8',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 9';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '9',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                                mensagemVisor = 'multiplicar';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '*',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
                           ),
                         ],
                       ),
@@ -205,155 +136,84 @@ class _MeuAppState extends State<MeuApp> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 4';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '4',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 7';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '7',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 5';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '5',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 8';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '8',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 6';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '6',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 9';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '9',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                                mensagemVisor = 'somar';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '+',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'multiplicar';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '*',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Expanded(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 1';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '1',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 2';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '2',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 3';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '3',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                                mensagemVisor = 'subtrair';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '-',
-                                style: TextStyle(
-                                  fontSize: 28,
-                                ),
-                              ),
-                            ),
                           ),
                         ],
                       ),
@@ -363,58 +223,238 @@ class _MeuAppState extends State<MeuApp> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = 'número 0';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '0',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 4';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '4',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.white,
-                              onPressed: () {
-                                mensagemVisor = '. decimais';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '.',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 5';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '5',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
                           ),
                           Expanded(
-                            child: RaisedButton(
-                              color: Colors.black12,
-                              textColor: Colors.blue,
-                              onPressed: () {
-                                mensagemVisor = 'resultado';
-                                setState(() {
-                                  mensagemVisor;
-                                });
-                              },
-                              child: Text(
-                                '=',
-                                style: TextStyle(
-                                  fontSize: 28,
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 6';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '6',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
                                 ),
                               ),
-                            ),
+                          ),
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'dividir';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '+',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 1';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '1',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
+                          ),
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 2';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '2',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
+                          ),
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 3';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '3',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
+                          ),
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'subtrair';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '-',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'número 0';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '0',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
+                          ),
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'decimais';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '.',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
+                          ),
+                          Expanded(
+                              child: ElevatedButton(
+                                onPressed: () {
+                                  mensagemVisor = 'resultado';
+                                  setState(() {
+                                    mensagemVisor;
+                                  });
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.black12, // Cor de fundo
+                                  foregroundColor: Colors.blue, // Cor do texto
+                                ),
+                                child: Text(
+                                  '=',
+                                  style: TextStyle(
+                                    fontSize: 28,
+                                  ),
+                                ),
+                              ),
                           ),
                         ],
                       ),
